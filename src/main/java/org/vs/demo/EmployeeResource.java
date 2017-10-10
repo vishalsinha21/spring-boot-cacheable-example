@@ -26,4 +26,9 @@ public class EmployeeResource {
         return ResponseEntity.ok(employeeService.getEmployeeById(empId));
     }
 
+    @RequestMapping("/refresh")
+    public ResponseEntity refreshCache() {
+        return ResponseEntity.ok(employeeService.refreshCache());
+    }
+
 }
